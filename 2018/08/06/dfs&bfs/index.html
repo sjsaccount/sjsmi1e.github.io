@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="搜索," />
 
 
 
@@ -81,14 +81,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="dfs（深度优先搜索） bfs（广度优先搜索） 前言作为初学者，可能会想，搜索吗，就是作用在图上啊，树上什么的算法。其实，搜索（这里主要说dfs和bfs），就是以一种特定方式，在大多数场景寻找真正想要结果的方式。而dfs就是以一种现已一种单一方式走到黑，然后通过回溯等得到答案的过程。而bfs则是先看有多少种方式可以走，然后先记录每一种方式，在一一按这种方式一层一层遍历，直到得到最后结果。这两种搜索">
+<meta name="keywords" content="搜索">
+<meta property="og:type" content="article">
+<meta property="og:title" content="dfs&amp;dfs">
+<meta property="og:url" content="http://yoursite.com/2018/08/06/dfs&bfs/index.html">
 <meta property="og:site_name" content="MY STUDY BLOG">
+<meta property="og:description" content="dfs（深度优先搜索） bfs（广度优先搜索） 前言作为初学者，可能会想，搜索吗，就是作用在图上啊，树上什么的算法。其实，搜索（这里主要说dfs和bfs），就是以一种特定方式，在大多数场景寻找真正想要结果的方式。而dfs就是以一种现已一种单一方式走到黑，然后通过回溯等得到答案的过程。而bfs则是先看有多少种方式可以走，然后先记录每一种方式，在一一按这种方式一层一层遍历，直到得到最后结果。这两种搜索">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-05T02:53:54.265Z">
+<meta property="og:updated_time" content="2018-08-06T08:41:28.573Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="dfs&amp;dfs">
+<meta name="twitter:description" content="dfs（深度优先搜索） bfs（广度优先搜索） 前言作为初学者，可能会想，搜索吗，就是作用在图上啊，树上什么的算法。其实，搜索（这里主要说dfs和bfs），就是以一种特定方式，在大多数场景寻找真正想要结果的方式。而dfs就是以一种现已一种单一方式走到黑，然后通过回溯等得到答案的过程。而bfs则是先看有多少种方式可以走，然后先记录每一种方式，在一一按这种方式一层一层遍历，直到得到最后结果。这两种搜索">
 
 
 
@@ -118,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/06/dfs&bfs/"/>
 
 
 
 
 
-  <title>tags | MY STUDY BLOG</title>
+  <title>dfs&dfs | MY STUDY BLOG</title>
   
 
 
@@ -293,40 +297,241 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/06/dfs&bfs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Smile">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MY STUDY BLOG">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 1 个标签
+          <h1 class="post-title" itemprop="name headline">dfs&dfs</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-06T15:22:09+08:00">
+                2018-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,929
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  8
+                </span>
+              
             </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/搜索/" style="font-size: 12px; color: #ccc">搜索</a>
-            </div>
-          </div>
-        
-      </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>dfs（深度优先搜索）</p>
+<p>bfs（广度优先搜索）</p>
+<p><strong>前言</strong><br>作为初学者，可能会想，搜索吗，就是作用在图上啊，树上什么的算法。其实，搜索（这里主要说dfs和bfs），就是以一种特定方式，在大多数场景寻找真正想要结果的方式。而dfs就是以一种现已一种单一方式走到黑，然后通过回溯等得到答案的过程。而bfs则是先看有多少种方式可以走，然后先记录每一种方式，在一一按这种方式一层一层遍历，直到得到最后结果。这两种搜索大体上没什么差别，都是搜索出所有可能满足自己的答案而已。有的人可能会说，bfs适合求最短路径，dfs适合求所有答案，其实，两个都可以相互转化（这里不多说，其实我也不怎么懂，哈哈~），只不过方便与否的问题罢了。</p>
+<p>下面就对这两种经典搜索进行简单探讨。<br><a id="more"></a><br>dfs（深度优先搜索）<br>模板：<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">void bfs()&#123;</span><br><span class="line">		if:(...)&#123;//需要的结果</span><br><span class="line">			...</span><br><span class="line">		//做出操作</span><br><span class="line">		return;//结束 </span><br><span class="line">		&#125; </span><br><span class="line">		...</span><br><span class="line">		dfs();</span><br><span class="line">		...//具体要怎么搜索 </span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这就是走到黑方式，就像对123进行全排列，123,132,213,231,312,321；</p>
+<p>按照顺序排列就是方式，然后逐个改变。</p>
+<p>多说这种无益，来一道最简单的bfs的题目吧：</p>
+<p>**有一款游戏叫做《绝地求生：大逃杀》。<br>绝地求生，是一款开放世界策略射击游戏，采用虚幻4引擎制作。 是一款大逃杀类型的游戏，每一局游戏将有100名玩家参与，他们将被投放在绝地岛(battlegrounds)的上空，游戏开始跳伞时所有人都一无所有。 游戏展开的方式是：玩家赤手空拳地分布在岛屿的各个角落，利用岛上多样的武器与道具。 随着时间的流逝，岛上的安全地带越来越少，特定地区也会发生轰炸的情况，最终只有一人存活获得胜利。游戏的每一局比赛都会随机转换安全区，这样玩家的很新鲜与紧张感会更加强烈。</p>
+<p>小东同学玩游戏也坚决不忘算法的学习，有一天，他面临了这样的情况，小东要前往安全区，他决定冒险通过一片大平原，虽然跑向两边的山上更安全，但是时间来不及了。在小东同学奔跑的过程中，浑然不知两边的山上各有一个人趴在那里埋伏猎物，他们同时发现小东，同时开枪！小东意识到危险了！伴随了若干声枪声，砰砰砰！小东已经倒地了…</p>
+<p>小东挂掉之前一秒，意识到了一件事，两边的人同时开枪，那么我又多少种中弹顺序呢？比如我有100血，而一个人用冲锋枪每发子弹能伤害我30血，另一个人用步枪每发子弹能伤害我45血，那导致我死亡的中弹顺序可能是，30 30 30 45，也可能是 45 45 30，也有可能是45 30 45，等等。当然，血量小于或等于0都算被击倒。</p>
+<p>同时要注意，如果两人每次对自己造成的伤害是相同的，但仍被看作不同的死亡顺序，比如玩家有100血量，左右两边的人每次能造成50血量的伤害，那么答案为4，情况分别为：</p>
+<p>50 50（左边敌人打中了两枪）。</p>
+<p>50 50（右边敌人打中了两枪）</p>
+<p>50 50（左边敌人开了第一枪）</p>
+<p>50 50（右边敌人开了第一枪）</p>
+<p>输入<br>本题有多组测试数据。每组占一行，由三个正整数m n hp组成（10=&lt;m&lt;hp&lt;90,10&lt;=n&lt;hp&lt;90）。m代表左边的敌人每次对玩家造成的伤害，n代表右边的敌人每次对玩家造成的伤害，hp代表玩家的血量。</p>
+<p>输出<br>对于每组输入数据，输出一行，结果为玩家有多少种死亡顺序，即中弹顺序。</p>
+<p>样例输入<br>45 30 100<br>50 50 100<br>12 23 80<br>样例输出<br>9<br>4<br>34**<br>思路：看题意是求出所有方式，所以用dfs比较方便，然后，走到黑，先以第一种方式减血（第一个例子，-45，-45，-45。。。），然后就回溯，继续操作，看代码：<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int ans=0,l,r,hp;</span><br><span class="line">void dfs(int hp,int l,int r)&#123;</span><br><span class="line">	if(hp&lt;=0)&#123;</span><br><span class="line">		ans++;</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line">	dfs(hp-l,l,r);</span><br><span class="line">	dfs(hp-r,l,r);</span><br><span class="line">&#125; </span><br><span class="line">int main()&#123;</span><br><span class="line">	while(cin&gt;&gt;l&gt;&gt;r&gt;&gt;hp)&#123;</span><br><span class="line">		dfs(hp,l,r);</span><br><span class="line">		cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">		ans=0;</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>下面就来看bfs：</p>
+<p>bfs（广度优先搜索）<br>模板：<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">void bfs()&#123;</span><br><span class="line">	if()&#123;</span><br><span class="line">		return;//首先判断当前位置是否为结果 </span><br><span class="line">	&#125;</span><br><span class="line">	while()&#123;</span><br><span class="line">		...//循环每一种方试直到最后的结果 </span><br><span class="line">	&#125; </span><br><span class="line">	</span><br><span class="line">	return ; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>对于bfs，用得最多的试队列，来插入（记录方法）与弹出（此方法遍历完毕）来进行搜索， 最经典的迷宫问题（求最短路径）：</p>
+<p>**平面迷宫<br>时间限制: 1 Sec  内存限制: 128 MB</p>
+<p>题目描述<br>老王同学深陷一个迷宫，他现在想要逃出去。迷宫 是这样的，在m行n列的矩阵当中，“.”表示可以通过的道路，“#”表示墙，是障碍物所以不能通过。迷宫中S代表起始点，E代表出口。老王每次只向上、向下、向左、向右移动一个单位距离，每次移动一个距离话费的时间是1分钟。请问老王最少花多少时间可以离开迷宫，或者根本就不能离开迷宫？</p>
+<p>输入<br>本题有多组测试数据，对于每组测试数据：</p>
+<p>两个整数mn表示m行n列的迷宫，0&lt;mn&lt;=100</p>
+<p>接下来是m行n列的迷宫，其中S表示入口，E表示出口，#表示墙，.表示通路。</p>
+<p>输出<br>如果老王逃出去话费X分钟，则输出：</p>
+<p>Escaped in x minute(s).</p>
+<p>如果老王不能逃出去，则输出：</p>
+<p>Trapped!</p>
+<p>样例输入<br>3 3<br>S..<br>.#.<br>..E</p>
+<p>3 3<br>S#.<br>.#.<br>.#E<br>样例输出<br>Escaped in 4 minute(s).<br>Trapped!<br> **</p>
+<p>思路也不必多说，搜索所有路径，找到最短的，代码如下：<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;queue&gt;</span><br><span class="line">#include&lt;string.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">char map[101][101];</span><br><span class="line">int n,m;</span><br><span class="line">int dir[4][2]=&#123;1,0,-1,0,0,1,0,-1&#125;;</span><br><span class="line">int v[101][101],d[101][101];</span><br><span class="line">queue &lt;char&gt; q;</span><br><span class="line">void bfs(int x,int y)&#123;</span><br><span class="line">	while(q.size())&#123;</span><br><span class="line">	char tq=q.front();</span><br><span class="line">	q.pop();</span><br><span class="line">	if(tq==&apos;E&apos;)	</span><br><span class="line">		break;</span><br><span class="line">	for(int i=0;i&lt;4;i++)&#123;</span><br><span class="line">		int tx=x+dir[i][0];</span><br><span class="line">		int ty=y+dir[i][1];</span><br><span class="line">		if(map[tx][ty]==&apos;.&apos;&amp;&amp;v[tx][ty]==0&amp;&amp;tx&gt;=0&amp;&amp;tx&lt;n&amp;&amp;ty&gt;=0&amp;&amp;ty&lt;m)&#123;</span><br><span class="line">			q.push(map[tx][ty]);</span><br><span class="line">			d[tx][ty]=d[x][y]+1;</span><br><span class="line">			v[tx][ty]=1;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">&#125; </span><br><span class="line">int main()&#123;</span><br><span class="line">	while(scanf(&quot;%d%d&quot;,&amp;n,&amp;m)!=EOF)&#123;</span><br><span class="line">		memset(v,0,sizeof(v));</span><br><span class="line">		memset(d,0,sizeof(d));</span><br><span class="line">		int ex,ey,sx,sy;</span><br><span class="line">		for(int i=0;i&lt;n;i++)</span><br><span class="line">			for(int j=0;j&lt;m;j++)&#123;</span><br><span class="line">				cin&gt;&gt;map[i][j];</span><br><span class="line">				if(map[i][j]==&apos;S&apos;)&#123;</span><br><span class="line">					sx=i;</span><br><span class="line">					sy=j;</span><br><span class="line">					q.push(map[i][j]);</span><br><span class="line">					v[i][j]=1;</span><br><span class="line">				&#125;</span><br><span class="line">				if(map[i][j]==&apos;E&apos;)&#123;</span><br><span class="line">					ex=i;</span><br><span class="line">					ey=j;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">		bfs(sx,sy);</span><br><span class="line">		if(d[ex][ey]==0)</span><br><span class="line">		cout&lt;&lt;&quot;Trapped!&quot;&lt;&lt;endl;</span><br><span class="line">		else</span><br><span class="line">		cout&lt;&lt;&quot;Escaped in &quot;&lt;&lt;d[ex][ey]&lt;&lt;&quot; minute(s).&quot;&lt;&lt;endl;</span><br><span class="line">				</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>可能会有错哦，好久以前写的，不知道是对的还是错的，但知道方式与思路就行！</p>
+<p>其实dfs与bfs都大相径庭，所以，当你用熟练了，几乎都能互用，只是代码多少的问题而已！</p>
+
       
     </div>
     
     
     
+
+    
+
+	<div>
+  	
+    	<div>
+
+    <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读!-------------</div>
+
+</div>
+  	
+	</div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/搜索/" rel="tag"><i class="fa fa-tag"></i> 搜索</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/05/我的第一篇博客/" rel="next" title="我的第一篇博客">
+                <i class="fa fa-chevron-left"></i> 我的第一篇博客
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
